@@ -39,9 +39,6 @@
       padding: 5px;
     }
     .menu-btn span { width: 100%; height: 2px; background: #333; transition: 0.3s; }
-    .close-btn:focus:not(:focus-visible) {
-      outline: none;
-    }
     /* ハンバーガーボタンのアニメーション */
     .menu-btn.is-active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
     .menu-btn.is-active span:nth-child(2) { opacity: 0; }
@@ -103,6 +100,9 @@
     .nav-list li { margin: 25px 0; }
     .nav-list a { font-size: 22px; font-weight: bold; display: block; padding: 10px; }
     .close-btn { position: absolute; top: 20px; right: 4%; font-size: 36px; background: none; border: none; cursor: pointer; color: #666; }
+    .close-btn:focus:not(:focus-visible) {
+      outline: none;
+    }
 
     /* コンテンツ全体のレイアウト */
     .section { padding: 80px 4%; max-width: 1200px; margin: 0 auto; }
