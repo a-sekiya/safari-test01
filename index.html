@@ -20,7 +20,16 @@
       padding: 0 4%; z-index: 100;
       backdrop-filter: blur(5px);
     }
+    .header-left { display: flex; align-items: center; gap: 20px; }
     .header-logo { font-size: 24px; font-weight: bold; letter-spacing: 0.05em; }
+    
+    /* 追加：サイト切り替えリンクのスタイル */
+    .switch-link {
+      font-size: 13px; background: #e0f2fe; color: #0369a1;
+      padding: 4px 12px; border-radius: 20px; font-weight: bold;
+      transition: background 0.2s;
+    }
+    .switch-link:hover { background: #bae6fd; }
 
     /* ハンバーガーボタン */
     .menu-btn {
@@ -84,7 +93,11 @@
 <body>
 
   <header class="header">
-    <div class="header-logo"><a href="#">ModernCorp</a></div>
+    <div class="header-left">
+      <div class="header-logo"><a href="#">ModernCorp</a></div>
+      <!-- 変更：index02.html（古風版）へのリンクを追加 -->
+      <a href="index02.html" class="switch-link">古風版（index02.html）へ</a>
+    </div>
     <button class="menu-btn" id="openBtn" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
