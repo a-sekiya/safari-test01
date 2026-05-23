@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>古風パターン（全画面・閉じるボタン版）</title>
+  <title>dialogタグを使わないパターン</title>
   <style>
     /* ベーススタイル */
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,7 +42,7 @@
     }
     .menu-btn span { width: 100%; height: 2px; background: #333; }
 
-    /* 古風なメニュー本体（右側から全画面でスライドイン） */
+    /* <dialog>タグを使わないメニュー本体（右側から全画面でスライドイン） */
     .nav-menu {
       position: fixed;
       top: 0; left: 100%; /* 初期状態は画面の右外 */
@@ -110,17 +110,16 @@
     <div class="header-left">
       <div class="header-logo"><a href="#">ClassicCorp</a></div>
       <!-- 変更：index.html（最新版）へのリンクを追加 -->
-      <a href="index.html" class="switch-link">最新版へ</a>
+      <a href="index.html" class="switch-link">dialogありへ</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
   </header>
 
-  <!-- 古風なメニュー本体（全画面） -->
+  <!-- <dialog>タグを使わないメニュー本体（全画面） -->
   <nav class="nav-menu" id="navMenu">
     <button class="close-btn" id="closeBtn" aria-label="メニューを閉じる">×</button>
-    
     <ul class="nav-list">
       <li><a href="#" class="menu-link">Home</a></li>
       <li><a href="#about" class="menu-link">About Us</a></li>
